@@ -18,13 +18,14 @@ AddEventHandler('playerDropped', function(reason)
     QBCore.Players[src] = nil
 end)
 
+--[[
 AddEventHandler("onResourceStop", function(resName)
     for i,v in pairs(QBCore.UsableItems) do
         if v.resource == resName then
             QBCore.UsableItems[i] = nil
         end
     end
-end)
+end)]]
 
 -- Player Connecting
 local readyFunction = MySQL.ready
